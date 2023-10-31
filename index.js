@@ -45,6 +45,9 @@ function createEmployeeRecord(data) {
     const hoursWorked = hoursWorkedOnDate.call(this, date);
     return hoursWorked * this.payPerHour;
   }
+  function findEmployeeByFirstName(collection, firstNameString){
+    return collection.find(employee => employee.firstName === firstNameString);
+  }
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
